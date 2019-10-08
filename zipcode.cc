@@ -14,7 +14,7 @@ using namespace std;
 ///function prototypes
 
 string checkDigitBarCode(int checkDigit);
-string getCodeDigit(char digit) ; 
+string getDigitCode(char digit) ; 
 int getCheckDigitValue(int sum) ; 
 int getSum(char number) ; 
 
@@ -33,7 +33,7 @@ int main() {
         cin.get(ch) ;
         while(isspace(ch) == false){
             if(isdigit(ch) == true){
-                barcode += getCodeDigit(ch) + ' ' ; 
+                barcode += getDigitCode(ch) + ' ' ; 
                 sumOfDigits = sumOfDigits + getSum(ch) ;
                 count ++ ;
                 cin.get(ch) ; 
@@ -70,7 +70,7 @@ int main() {
     return 0;
 }
 
-string getCodeDigit(char digit){  
+string getDigitCode(char digit){  
     if(digit == '0'){
         return "||:::" ;
     } else if(digit == '1'){

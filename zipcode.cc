@@ -76,7 +76,7 @@ string getDigitCode(char digit){
     } else if(digit == '1'){
         return ":::||" ;
     } else if(digit == '2'){
-        return "::||:" ; 
+        return "::|:|" ; 
     } else if(digit == '3'){
         return "::||:" ;  
     } else if(digit == '4'){
@@ -122,7 +122,11 @@ int getSum(char number){
 } 
 
 int getCheckDigitValue(int sum) {
-    sum = 10 - (sum % 10) ;
+    if(sum % 10 == 0){
+        sum = 0 ;
+    }else{
+        sum = 10 - (sum % 10) ;
+    }
     return sum ; 
 }
 
